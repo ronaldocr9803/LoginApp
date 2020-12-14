@@ -27,13 +27,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window?.makeKeyAndVisible()
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        appDelegate.window = window
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
+        guard let windowScene = (scene as? UIWindowScene) else {return}
+        self.window = UIWindow(windowScene: windowScene)
+//
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         let navigationController = UINavigationController.init(rootViewController: viewController)
         self.window?.rootViewController = navigationController
-
+//
         self.window?.makeKeyAndVisible()
     }
 

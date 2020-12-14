@@ -7,7 +7,7 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -44,14 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window!.makeKeyAndVisible()
 //
 //
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        let navigationController = UINavigationController.init(rootViewController: viewController)
-        self.window?.rootViewController = navigationController
-
-        self.window?.makeKeyAndVisible()
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//        let navigationController = UINavigationController.init(rootViewController: viewController)
+//        self.window?.rootViewController = navigationController
+//
+//        self.window?.makeKeyAndVisible()
         return true
     }
 
